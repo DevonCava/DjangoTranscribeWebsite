@@ -1,0 +1,19 @@
+{%extends 'layout.html'%}
+
+{% block title %}
+Users
+{% endblock %}
+
+{% block content %}
+<h1>This is the users page</h1>
+<h2>Click <a href={% url 'users:register'%}>here</a> to register a new user<h2>
+<h1>Existing users:</h1>
+<br>
+    <section>
+        {% for user in allUsers %}
+            <article>
+                <h2 style="color: red">{{user.username}}</h2>
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}

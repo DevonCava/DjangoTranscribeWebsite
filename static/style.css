@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 3rem;
+    display: flex;
+    flex-flow: column;
+}
+
+nav {
+    padding: 1rem;
+    background-color: #99d0f8;
+    color: white;
+    font-size: 2.5rem;
+    border-bottom: white 2px solid;
+}
+
+main {
+    flex-grow: 1;
+    display: grid;
+    place-content: center;
+}
+
+h1,h2,
+p {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #81dbb8;
+}
+
+.gridBlocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 10vw);
+    background-color: black;
+}
+
+.gridBlocks div {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    /* border: black 0.5px solid; 
+    Turn on for debugging grid layout*/
+}
+
+.gridBlocks div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: pixelated;
+}
+
+.post {
+    display: flex; /* Enables flexbox layout */
+    flex-direction: row; /* Aligns items in a row */
+    align-items: flex-start; /* Aligns items to the top */
+    justify-content: flex-start; /* Aligns items to the left */
+    position: absolute; /* Positions the row on the left side */
+    left: 0; /* Aligns the row to the left edge of the screen */
+}
+
+.banner {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    image-rendering: pixelated;
+}
+
+.form-with-validation {
+    font-size: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+}
+
+.form-with-validation div {
+    display: flex;
+    flex-flow: column;
+    gap: 0.5rem;
+}
+
+.form-with-validation input {
+    padding: 0.25rem;
+    max-width: 300px;
+}
+
+.form-submit {
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: 125px;
+}
+
+.helptext {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.helptext ul {
+    list-style-type: none;
+}
+
+.errorlist {
+    color: #F00;
+    margin-left: 2rem;
+}
+
+.errorlist li::marker {
+    content: '🚨 ';
+}
+
+.logout {
+    display: inline-block;
+}
+
+.logout-button{
+    font-size: 2.5rem;
+    background-color: transparent;
+    border: none;
+}
+
+.logout-button:hover {
+    opacity: 0.8;
+}

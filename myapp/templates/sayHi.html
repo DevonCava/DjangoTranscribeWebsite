@@ -1,0 +1,22 @@
+{%extends 'layout.html'%}
+
+{% block title %}
+sayHi
+{% endblock %}
+
+{% block content %}
+<h1>Welcome to the transcribe page</h1>
+<p>Upload your audio file here to have it transcribed for you</p>
+<form class="form-with-validation" action="/sayHi/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="fileUpload" accept="audio/mpeg, video/mp4">
+    <button class="form-submit" id="submit-button" onclick="changeText()" type="submit">Submit</button>
+</form>
+<p> {{transcript}}</p>
+<script>
+    function changeText(){
+        const button = document.getElementById("submit-button");
+        button.textContent = "Transcribing...";
+    }
+</script>
+{% endblock %}

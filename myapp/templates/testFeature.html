@@ -1,0 +1,32 @@
+{%extends 'layout.html'%}
+
+{% block title %}
+testFeature
+{% endblock %}
+
+{% block content %}
+<h1>This is an experimental page, weird features will be added here in the future.</h1>
+    
+<section class="gridBlocks">
+    {% for i in rangeTen%}
+        <div><img src="/static/grass_block_side.png" alt="block"></div>
+    {% endfor %}
+
+    {% for i in rangeTen%}
+        <div><img src="/static/dirt.png" alt="block"></div>
+    {% endfor %}
+
+    {% for i in rangeTwenty%}
+        <div><img src="/static/stone.png" alt="block"></div>
+    {% endfor %}
+
+    {% for i in midLayer%}
+        <div><img src="/static/{{i}}" alt="block"></div>
+    {% endfor %}
+
+    {% for in in rangeTen%}
+    <div><img src="/static/bedrock.png" alt="block"></div>
+    {% endfor %}
+    
+</section>
+{% endblock %}
